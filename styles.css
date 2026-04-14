@@ -1054,6 +1054,94 @@ td {
   font-weight: 700;
 }
 
+.detail-gallery-section,
+.detail-banner-section {
+  margin-top: 22px;
+}
+
+.detail-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.gallery-card,
+.promo-banner-card {
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  background: rgba(255, 255, 255, 0.94);
+}
+
+.gallery-frame {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: var(--surface-muted);
+}
+
+.gallery-frame img,
+.promo-banner-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-label {
+  display: block;
+  padding: 14px 16px 16px;
+  color: var(--muted);
+  font-size: 0.84rem;
+  font-weight: 800;
+}
+
+.promo-banner-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.promo-banner-image {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--surface-muted);
+}
+
+.promo-banner-copy {
+  padding: 18px;
+}
+
+.promo-banner-label {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.promo-banner-copy h3 {
+  margin-top: 12px;
+  font-size: 1.18rem;
+  letter-spacing: -0.03em;
+}
+
+.promo-banner-copy p {
+  margin-top: 10px;
+  color: var(--muted);
+  line-height: 1.72;
+}
+
+.consultation-card .promo-banner-copy {
+  height: 100%;
+}
+
 .detail-metrics {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -1108,6 +1196,10 @@ td {
   padding-left: 18px;
   color: var(--muted);
   line-height: 1.8;
+}
+
+.detail-list.compact {
+  margin-top: 12px;
 }
 
 .other-brand-grid {
@@ -1213,6 +1305,8 @@ body[data-brand-id="sugarmanwork"] .badge {
 body[data-brand-id="sugarmanwork"] .brand-logo-symbol-wrap,
 body[data-brand-id="sugarmanwork"] .brand-logo-text-wrap,
 body[data-brand-id="sugarmanwork"] .detail-image-card,
+body[data-brand-id="sugarmanwork"] .gallery-card,
+body[data-brand-id="sugarmanwork"] .promo-banner-card,
 body[data-brand-id="sugarmanwork"] .detail-panel,
 body[data-brand-id="sugarmanwork"] .detail-section-card,
 body[data-brand-id="sugarmanwork"] .nav-card,
@@ -1258,6 +1352,8 @@ body[data-brand-id="sugarmanwork"] .other-brand-card {
   }
 
   .detail-metrics,
+  .detail-gallery-grid,
+  .promo-banner-grid,
   .other-brand-grid,
   .detail-nav {
     grid-template-columns: 1fr;
@@ -1325,6 +1421,8 @@ body[data-brand-id="sugarmanwork"] .other-brand-card {
   .type-grid,
   .check-grid,
   .detail-metrics,
+  .detail-gallery-grid,
+  .promo-banner-grid,
   .detail-content-grid,
   .other-brand-grid,
   .detail-nav {
